@@ -15,6 +15,12 @@ public class SpeedBlock extends Block {
 
     @Override
     public void stepOn(Level plevel, BlockPos pPos, BlockState pState, Entity pEntity) {
+        if(!plevel.isClientSide()) {
+            if(pEntity instanceof LivingEntity) {
+                LivingEntity livingEntity = ((LivingEntity) pEntity);
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300));
+            }
+        }
         super.stepOn(plevel, pPos, pState, pEntity);
     }
 }

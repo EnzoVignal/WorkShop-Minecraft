@@ -15,6 +15,7 @@ public class TutBlockTags extends BlockTagsProvider {
 
     @Override
     protected void addTags(){
+
     }
 
     @Override

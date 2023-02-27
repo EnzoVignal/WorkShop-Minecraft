@@ -15,6 +15,7 @@ public class TutItemTags extends ItemTagsProvider {
 
     @Override
     protected void addTags() {
+
     }
 
     @Override
